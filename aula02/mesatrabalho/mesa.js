@@ -4,16 +4,12 @@ function getRandomIntInclusive(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-var ganhador = 0;
-
 var maquina = 0;
 
 var jogador = 0;
 
 
 do {
-
-
 
     var aleatorio = getRandomIntInclusive(1, 3);
 
@@ -54,7 +50,7 @@ do {
         ganhador;
     } else if (escolhaMaquina == "papel" && escolhaUsuario == "tesoura") {
         jogador += 1;
-    } else if (escolhaMaquina = "papel" && escolhaUsuario == "pedra") {
+    } else if (escolhaMaquina == "papel" && escolhaUsuario == "pedra") {
         maquina += 1;
     } else if (escolhaMaquina == "tesoura" && escolhaUsuario == "tesoura") {
         ganhador;

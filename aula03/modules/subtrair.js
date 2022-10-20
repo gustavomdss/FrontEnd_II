@@ -3,4 +3,4 @@ let subtrair = function(num1, num2){
 };
 
 
-module.exports = subtrair
+export default subtrair;

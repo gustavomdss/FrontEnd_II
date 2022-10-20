@@ -3,4 +3,4 @@
     };
 
 
-    module.exports = somar;
+    export default somar;

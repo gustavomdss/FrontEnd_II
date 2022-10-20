@@ -7,4 +7,4 @@ let divisao = function(num1, num2){
 }
 
 
-module.exports = divisao;
+export default divisao;

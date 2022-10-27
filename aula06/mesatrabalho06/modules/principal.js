@@ -16,47 +16,35 @@ let p6 = "O guepardo, ou chita (Acinonyx jubatus) é um membro atípico da famí
 
 var textos = [p1, p2, p3, p4, p5, p6];
 
+var imagens = ["./imagens/tiger.jpg", "./imagens/leon.jpg", "./imagens/leopardo.jpg", "./imagens/pantera-negra.jpg", "./imagens/jaguar.jpg", "./imagens/chita.jpg"];
 
 
 for (let i = 0; i < textos.length; i++) {
 
    var container1 = document.createElement("div");
-var container1image = document.createElement("img");
-var container1h2 = document.createElement("h2");
- var container1p = document.createElement("p");
+   var container1image = document.createElement("img");
+   var container1h2 = document.createElement("h2");
+   var container1p = document.createElement("p");
 
- var textnode1 = document.createTextNode(textos[i])
- var titulonode1 =document.createTextNode(titulos[i])
+   var textnode1 = document.createTextNode(textos[i])
+   var titulonode1 = document.createTextNode(titulos[i])
 
- container1p.appendChild(textnode1);
-container1h2.appendChild(titulonode1);
+   container1p.appendChild(textnode1);
+   container1h2.appendChild(titulonode1);
 
-var container = document.querySelector(".container")
+   var container = document.querySelector(".container")
 
-container.appendChild(container1);
+   container.appendChild(container1);
 
+   container1.appendChild(container1image)
+   container1.appendChild(container1h2);
+   container1.appendChild(container1p);
 
-container1.appendChild(container1image)
- container1.appendChild(container1h2);
-container1.appendChild(container1p);
+   let adicionaclasse = document.querySelectorAll(".container div");
+   let imagem = document.querySelectorAll('img');
 
-   
-   
-}
-
-let adicionaclasse = document.querySelectorAll(".container div");
-
-for (let i = 0; i < adicionaclasse.length; i++) {
    adicionaclasse[i].classList.add('item')
-   
-}
-
-let imagem = document.querySelectorAll('img');
-let imagens = ["./imagens/tiger.jpg", "./imagens/leon.jpg", "./imagens/leopardo.jpg", "./imagens/pantera-negra.jpg", "./imagens/jaguar.jpg", "./imagens/chita.jpg" ];
-
-for (let i = 0; i < imagens.length; i++) {
-   imagem.setAttribute("src","imagens[i]")
-   
+   imagem[i].setAttribute("src", imagens[i]);
 }
 
 
@@ -71,24 +59,4 @@ for (let i = 0; i < imagens.length; i++) {
 
 
 
-
-
-
-//  var container1 = document.createElement("div");
-// var container1image = document.createElement("img");
-// var container1h2 = document.createElement("h2");
-//  var container1p = document.createElement("p");
-
-//  var textnode1 = document.createTextNode(p1)
-//  var titulonode1 =document.createTextNode(titulo1)
-
-//  container1p.appendChild(textnode1);
-// container1h2.appendChild(titulonode1);
-
-// var container = document.querySelector(".container")
-
-// container.appendChild(container1);
-
-//  container1.appendChild(container1h2);
-// container1.appendChild(container1p);
 

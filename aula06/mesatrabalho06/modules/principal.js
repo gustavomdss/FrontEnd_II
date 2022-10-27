@@ -46,17 +46,3 @@ for (let i = 0; i < textos.length; i++) {
    adicionaclasse[i].classList.add('item')
    imagem[i].setAttribute("src", imagens[i]);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

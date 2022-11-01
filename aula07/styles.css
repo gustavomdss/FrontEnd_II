@@ -1,0 +1,39 @@
+.form_control2 {
+    width: 500px;
+}
+.form_control3 {
+    width: 200px;
+}
+.title {
+    text-align: center;
+    padding-bottom: 50px;
+}
+.caixa {
+    display: flex;
+    /* justify-content:center; */
+    flex-direction: column;
+    background-color: rgb(240, 238, 229);
+    width: 600px;
+    height: 100px;
+   margin: auto;
+}
+.caixa1 {
+    text-align: center;
+}
+.caixa2 {
+    margin:auto;
+   
+}
+.formulario {
+    display: flex;
+  flex-direction: column;
+ 
+  
+}
+.botao {
+    width: 100px;
+}
+.botoes {
+    text-align: center;
+    padding-top: 50px;
+}

@@ -3,29 +3,46 @@
 let texto = document.getElementById("texto");
 let botao = document.getElementById("enviar");
 let sessao = document.getElementById("principal");
+let somar = []
+let inicial = localStorage.getItem("01")
 
 
 function Construcao(texto){
     this.texto = texto
 }
-
-
-function acrescentar(event){
-    event.preventDefault();
+function ValidateEmail(texto) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(texto.value))
+  {
+    return (true)
+  }
+    
+    return (false)
+}
+texto.addEventListener("keyup", function()
+{
+    if(ValidateEmail(texto)){
+        botao.removeAttribute("disabled")
+    }
+}
+)
 
      
-     let arrayObjeto = new Construcao(texto.value)
+    //  let arrayObjeto = new Construcao(texto.value)
 
-     let somar = ""
-     somar += arrayObjeto.texto
-    //  JSON.stringify(arrayObjeto)
-     console.log(somar);
-    // localStorage.setItem("01", texto.array)
+    //  //JSON.stringify(arrayObjeto)
+    //  somar.push(arrayObjeto.texto);
+    
+    // console.log(somar);
+
+    // localStorage.setItem("01", somar)
     // let conteudo = localStorage.getItem("01");
+    
     // sessao.innerHTML += `
     // <p>${conteudo}</p>
     // `
-}
 
-botao.addEventListener("click", acrescentar)
+
+
+// botao.addEventListener("click", acrescentar)
 

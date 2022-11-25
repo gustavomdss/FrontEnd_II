@@ -94,9 +94,10 @@ function renderizarDadosUsuario(dados) {
     <img src="${inserir.imagem.grande}"
     <p class="nome">${inserir.nome.titulo} ${inserir.nome.primeiro} ${inserir.nome.ultimo}</p>
     <p>${inserir.email}</p>`}
-    /* -------------------------------- TAREFAS -------------------------------- */
+}
+
+/* -------------------------------- TAREFAS -------------------------------- */
     // Aqui  devem desenvolver uma função que é exibida na tela:
     // a foto, o nome completo do usuário e seu e-mail.
     //  Isso deve ser baseado nas informações que chegam até nós e  são inseridas no HTML.
     //  Dica: você pode manipular o CSS e estruturar o card ao seu gosto.
-}

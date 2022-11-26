@@ -1,8 +1,8 @@
 // Aqui realizamos a consulta da promisse, esperando sua resposta assíncrona
 let btn = document.getElementById("random")
 
-btn.addEventListener("click", function (event) {
-  event.preventDefault
+window.onload = inserir()
+function inserir(){
 
   fetch('https://randomuser.me/api/')
 
@@ -10,22 +10,25 @@ btn.addEventListener("click", function (event) {
         return response.json()
     })
     .then(response => {
-        renderizarDadosUsuario(response)
-       
+        renderizarDadosUsuario(response)      
     });
-
-    } )
-
-function renderizarDadosUsuario(dados) {
-    let card = document.querySelector(".card");
-    for(let imagem of dados.results){
-    card.innerHTML = `
-    <img src="${imagem.picture.large}" class="image">
-    <p>${imagem.name.title} ${imagem.name.first} ${imagem.name.last}</p>
-    <p>${imagem.email}</p>
-    `
+    
+    function renderizarDadosUsuario(dados) {
+        let card = document.querySelector(".card");
+        for(let imagem of dados.results){
+        card.innerHTML = `
+        <img src="${imagem.picture.large}" class="image">
+        <p>${imagem.name.title} ${imagem.name.first} ${imagem.name.last}</p>
+        <p>${imagem.email}</p>
+        `
+        }
     }
-}
+    } 
+    btn.addEventListener("click", inserir)
+
+
+
+
 
     /* -------------------------------- Tarefa 1 -------------------------------- */
     // Aqui devem desenvolver uma função que seja exibida na tela:

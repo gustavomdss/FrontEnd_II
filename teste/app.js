@@ -1,20 +1,22 @@
-let email = document.getElementById("emailinput")
-let botao = document.getElementById("enviar")
-let teste = document.getElementById('teste')
+let btn = document.getElementById("botao");
+window.onload = inserir
+btn.addEventListener("click", inserir )
+   
+function inserir(event){
+        event.preventDefault();
 
-botao.addEventListener("click", function(event){
-event.preventDefault()
+fetch('https://dog.ceo/api/breeds/image/random')
+.then(retorno => {
+    return retorno.json()
+})
+.then(dados => {
+listarFotosdeCachorros(dados.message)
+console.log(dados.message)
 })
 
-botao.addEventListener("click", function(){
-
-    let item = `
-    <div>
-    <h1>${email.value}</h1>
-    </div>`
-    teste.innerHTML += item
-
-})
-botao.addEventListener("dblclick", function(){
-    alert('voce clicou duas vezes"')
-})
+function listarFotosdeCachorros(info){
+    let imagem = document.getElementById("foto")
+    imagem.innerHTML = `
+    <img src="${info}" class="imagem">`
+}
+}
